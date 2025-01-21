@@ -1,0 +1,31 @@
+{
+  "name": "tsx-init",
+  "version": "1.0.1",
+  "description": "Quickstart a new TypeScript Project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luastoned/tsx-init.git"
+  },
+  "author": "LuaStoned <npm@luastoned.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "bin/tsx-init.js",
+  "bin": {
+    "tsx-init": "./bin/tsx-init.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "start": "node bin/tsx-init.js",
+    "dev": "tsx src/tsx-init.ts",
+    "build": "esbuild src/tsx-init.ts --bundle --platform=node --format=cjs --target=node20 --outfile=bin/tsx-init.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "esbuild": "^0.24.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
