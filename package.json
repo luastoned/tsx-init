@@ -1,6 +1,6 @@
 {
   "name": "tsx-init",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Quickstart a new TypeScript Project",
   "repository": {
     "type": "git",
@@ -23,9 +23,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^22.10.7",
-    "esbuild": "^0.24.2",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3"
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.15.29",
+    "esbuild": "^0.25.5",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
   }
 }
