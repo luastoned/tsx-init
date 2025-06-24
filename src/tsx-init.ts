@@ -12,6 +12,8 @@ const appTsContent = `const runApp = async () => {
 
 runApp().catch((error) => console.log('Error', error));`;
 
+const tscInit = 'tsc --init --target es2024 --module preserve --moduleResolution bundler --rootDir src --baseUrl .';
+
 const execPromise = (command: string) => {
   return new Promise((resolve, reject) => {
     exec(command, (error, stdout, stderr) => {
@@ -138,6 +140,10 @@ const runApp = async () => {
   } else {
     console.log('- file src/app.ts already exists');
   }
+
+  // create tsconfig.json file
+  await execPromise(tscInit).catch(() => null);
+  console.log('+ created tsconfig.json');
 };
 
 runApp().catch((error) => console.log('Error', error));
